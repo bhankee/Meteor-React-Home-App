@@ -24,6 +24,7 @@ body {
 .input {
 	margin-top: 5px;
 	color: #094099;
+	font-size: 26px;
 }
 
 .button-buffer {
@@ -44,9 +45,9 @@ body {
 	margin-bottom: 125px;
 }
 
-.houseItems li {
+.houseItems a {
 	margin: 10px;
-
+	font-size: 26px;
 	font-weight: bold;
 	cursor: pointer;
 }
