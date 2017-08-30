@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
+import App from '../imports/ui/app';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
-import { Players } from './../imports/api/players';
-import Player from './../imports/ui/Player';
-import App from './../imports/ui/App';
+require('../imports/client/styles/index.css');
+import { Paint } from '../imports/api/Paint';
 
 Meteor.startup(() => {
 	Tracker.autorun(() => {
-		let players = Players.find({}, { sort: { score: -1 } }).fetch();
-		let title = 'Score Keep';
-
-		ReactDOM.render(
-			<App title={title} players={players} />,
-			document.getElementById('app')
-		);
+		let paint = Paint.find().fetch();
+		ReactDOM.render(<App paint={paint} />, document.getElementById('app'));
 	});
 });

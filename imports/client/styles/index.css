@@ -1,0 +1,56 @@
+body {
+	background-color: #21c6ad;
+}
+
+.text-center {
+	text-align: center;
+	font-weight: bold;
+	color: #094099;
+}
+.text-left {
+	text-align: left;
+	font-weight: 600;
+	color: black;
+}
+
+.nav-left {
+	text-align: left;
+}
+.form {
+	text-align: center;
+	margin: 30px auto 50px auto;
+}
+
+.input {
+	margin-top: 5px;
+	color: #094099;
+}
+
+.button-buffer {
+	margin-top: 5px;
+	color: white;
+}
+
+.homeIntroLg {
+	text-align: center;
+	font-size: 46px;
+	color: white;
+}
+.homeIntroMd {
+	text-align: center;
+	font-size: 36px;
+	color: #2370c4;
+}
+
+.houseItems {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.houseItems li {
+	margin: 10px;
+	font-size: 26px;
+	font-weight: bold;
+	cursor: pointer;
+}

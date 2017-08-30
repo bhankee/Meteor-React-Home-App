@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Players } from './../api/players';
-import Player from './/Player';
 
-import TitleBar from './TitleBar';
-import AddPlayer from './AddPlayer';
-import PlayerList from './PlayerList';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Home from './home';
+import PaintPage from './PaintPage';
+import AppliancePage from './AppliancePage';
+import HardwarePage from './HardwarePage';
+import FlooringPage from './FlooringPage';
 
-class App extends React.Component {
+class App extends Component {
 	render() {
 		return (
-			<div>
-				<TitleBar
-					title={this.props.title}
-					subtitle="Created by Brad Hankee"
-				/>
-				<div className="wrapper">
-					<PlayerList players={this.props.players} />
-					<AddPlayer />
+			<BrowserRouter>
+				<div>
+					<Route exact path="/" component={Home} />
+					<Route path="/paint" component={PaintPage} />
+					<Route path="/appliances" component={AppliancePage} />
+					<Route path="/hardware" component={HardwarePage} />
+					<Route path="/flooring" component={FlooringPage} />
 				</div>
-			</div>
+			</BrowserRouter>
 		);
 	}
 }
