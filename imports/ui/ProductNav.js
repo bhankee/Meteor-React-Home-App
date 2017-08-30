@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 const ProductNav = () =>
 	<div className="houseItems">
+		<Link to="/" className="houseItems">
+			Home
+		</Link>
 		<Link to="/paint" className="houseItems">
 			Paint
 		</Link>

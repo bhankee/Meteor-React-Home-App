@@ -1,69 +1,51 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ProductNav from './ProductNav';
+import { Flooring } from '../api/Flooring';
 
-class AppliancePage extends Component {
+class FlooringPage extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			itemBrand: ['Kmart'],
-			itemDescription: ['coffee maker'],
-			itemModel: ['5678'],
-			itemRoom: ['Kitchen']
-		};
-
+		this.state = {};
 		this.handleSubmit = this.handleSubmit.bind(this);
-		//Brads cool
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-		var updateBrand = this.state.itemBrand;
-		updateBrand.push(this.refs.brand.value);
-
-		var updateDescription = this.state.itemDescription;
-		updateDescription.push(this.refs.description.value);
-
-		var updateModel = this.state.itemModel;
-		updateModel.push(this.refs.model.value);
-
-		var updateRoom = this.state.itemRoom;
-		updateRoom.push(this.refs.room.value);
-
-		this.setState({
-			itemBrand: updateBrand,
-			itemDescription: updateDescription,
-			itemModel: updateModel,
-			itemRoom: updateRoom
+		Flooring.insert({
+			brand: e.target.brand.value,
+			color: e.target.descripton.value,
+			model: e.target.model.value,
+			room: e.target.room.value
 		});
 	}
 
 	render() {
-		var itemBrandArr = this.state.itemBrand;
+		var flooringArr = Flooring.find().fetch();
 
-		var itemDescriptionArr = this.state.itemDescription;
-
-		var itemModelArr = this.state.itemModel;
-
-		var itemRoomArr = this.state.itemRoom;
-		itemRoomArr = itemRoomArr.map((room, index) =>
-			<div className="row">
-				<div className="col-xs-2">
-					<li className="list-group-item text-center" key={room}>
-						{itemBrandArr[index]}
-						<li className="list-group-item text-left">
-							{itemDescriptionArr[index]}
-						</li>
-						<li className="list-group-item text-left">
-							{itemModelArr[index]}
-						</li>
-						<li className="list-group-item text-left">
-							{itemRoomArr[index]}
-						</li>
-					</li>
-				</div>
-			</div>
-		);
+		const flooringData = function(list) {
+			return list.map(function(flooring) {
+				return (
+					<div
+						className=" text-center item-container"
+						key={flooring._id}
+					>
+						<p>
+							Brand: {flooring.brand}
+						</p>
+						<p>
+							Desciption: {flooring.discription}
+						</p>
+						<p>
+							Model: {flooring.model}
+						</p>
+						<p>
+							Room: {flooring.room}
+						</p>
+					</div>
+				);
+			});
+		};
 
 		return (
 			<div>
@@ -85,9 +67,6 @@ class AppliancePage extends Component {
 									name="brand"
 									className="form-control"
 									placeholder="Brand/Company"
-									ref="brand"
-									value={this.props.value}
-									onChange={this.props.onChange}
 								/>
 							</div>
 						</div>
@@ -104,9 +83,6 @@ class AppliancePage extends Component {
 									name="descripton"
 									className="form-control"
 									placeholder="Description"
-									ref="description"
-									value={this.props.value}
-									onChange={this.props.onChange}
 								/>
 							</div>
 						</div>
@@ -123,9 +99,6 @@ class AppliancePage extends Component {
 									name="model"
 									className="form-control"
 									placeholder="Model"
-									ref="model"
-									value={this.props.value}
-									onChange={this.props.onChange}
 								/>
 							</div>
 						</div>
@@ -142,9 +115,6 @@ class AppliancePage extends Component {
 									name="room"
 									className="form-control"
 									placeholder="Room"
-									ref="room"
-									value={this.props.value}
-									onChange={this.props.onChange}
 								/>
 							</div>
 						</div>
@@ -161,7 +131,7 @@ class AppliancePage extends Component {
 				<div>
 					<div>
 						<ul className="list-group">
-							{itemRoomArr}
+							{flooringData(flooringArr)}
 						</ul>
 					</div>
 				</div>
@@ -170,4 +140,4 @@ class AppliancePage extends Component {
 	}
 }
 
-export default AppliancePage;
+export default FlooringPage;

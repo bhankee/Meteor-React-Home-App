@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import ProductNav from './ProductNav';
+import PicNav from './PicNav';
 
 class Home extends Component {
 	constructor(props) {
@@ -11,11 +11,8 @@ class Home extends Component {
 		return (
 			<div>
 				<h1 className="homeIntroLg">Welcome Home</h1>
-				<h1 className="homeIntroLg">
-					Congrats for adding something to your amazing home
-				</h1>
-				<h3 className="homeIntroMd">I want to add...</h3>
-				<ProductNav />
+
+				<PicNav />
 			</div>
 		);
 	}

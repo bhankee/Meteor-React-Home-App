@@ -27,18 +27,22 @@ class PaintPage extends Component {
 		const paintData = function(list) {
 			return list.map(function(paint) {
 				return (
-					<div className="row">
-						<div className="col-xs-2">
-							<p
-								className="list-group-item text-center"
-								key={paint._id}
-							>
-								{paint.brand}
-								{paint.color}
-								{paint.sheen}
-								{paint.room}
-							</p>
-						</div>
+					<div
+						className=" text-center item-container"
+						key={paint._id}
+					>
+						<p>
+							Brand: {paint.brand}
+						</p>
+						<p>
+							Color: {paint.color}
+						</p>
+						<p>
+							Sheen: {paint.sheen}
+						</p>
+						<p>
+							Room: {paint.room}
+						</p>
 					</div>
 				);
 			});
@@ -126,11 +130,7 @@ class PaintPage extends Component {
 					</div>
 				</form>
 				<div>
-					<div>
-						<div className="list-group">
-							{paintData(paintArr)}
-						</div>
-					</div>
+					{paintData(paintArr)}
 				</div>
 			</div>
 		);

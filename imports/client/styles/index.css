@@ -35,22 +35,52 @@ body {
 	text-align: center;
 	font-size: 46px;
 	color: white;
+	margin: 75px auto 200px auto;
 }
 .homeIntroMd {
 	text-align: center;
 	font-size: 36px;
 	color: #2370c4;
-}
-
-.houseItems {
-	display: flex;
-	justify-content: center;
-	padding: 10px;
+	margin-bottom: 125px;
 }
 
 .houseItems li {
 	margin: 10px;
-	font-size: 26px;
+
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.homeNav {
+	margin-top: 1000px;
+}
+
+.item-container {
+	width: 400px;
+	height: auto;
+	background-color: dodgerblue;
+	border: 1px solid dodgerblue;
+	border-radius: 10px;
+	color: white;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	font-size: 26px;
+}
+
+.iconContainer {
+	text-align: center;
+	margin: 75px;
+}
+
+.imgStyle {
+	background-color: rgba(92, 163, 243, .8);
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.centerCaption {
+	text-align: center;
+	padding: 25px;
+	font-size: 28px;
 }
