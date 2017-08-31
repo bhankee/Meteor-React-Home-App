@@ -3,20 +3,20 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
 const ProductNav = () =>
-	<div className="houseItems">
-		<Link to="/" className="houseItems">
+	<div className="navList">
+		<Link to="/" className="navList">
 			Home
 		</Link>
-		<Link to="/paint" className="houseItems">
+		<Link to="/paint" className="navList">
 			Paint
 		</Link>
-		<Link to="/appliances" className="houseItems">
+		<Link to="/appliances" className="navList">
 			Appliances
 		</Link>
-		<Link to="/hardware" className="houseItems">
+		<Link to="/hardware" className="navList">
 			Hardware
 		</Link>
-		<Link to="/flooring" className="houseItems">
+		<Link to="/flooring" className="navList">
 			Flooring
 		</Link>
 	</div>;
