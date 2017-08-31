@@ -1,5 +1,5 @@
 body {
-	background-color: #efefef;
+	background-color: #ffd464;
 	font-family: 'Ubuntu', sans-serif;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .input {
 	margin-top: 5px;
-	color: #ff383f;
+	color: #f26964;
 	font-size: 26px;
 }
 
@@ -37,10 +37,11 @@ body {
 
 .homeIntroLg {
 	text-align: center;
-	font-size: 76px;
-	color: #a9a9a9;
+	font-size: 86px;
+	font-weight: bold;
+	color: white;
 	margin: 75px auto 200px auto;
-	background-color: #caebf2;
+
 	border-radius: 10px;
 	width: 30%;
 	padding: 30px;
@@ -57,7 +58,7 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	cursor: pointer;
-	color: #ff383f;
+	color: #1253a4;
 }
 
 .navList a {
@@ -65,7 +66,7 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	cursor: pointer;
-	color: #a9a9a9;
+	color: #1253a4;
 }
 
 .homeNav {
@@ -75,7 +76,7 @@ body {
 .item-container {
 	width: 400px;
 	height: auto;
-	background-color: #a9a9a9;
+	background-color: #1253a4;
 	border: 1px solid #a9a9a9;
 	border-radius: 10px;
 	color: #caebf2;
