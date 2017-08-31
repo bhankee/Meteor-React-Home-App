@@ -35,16 +35,15 @@ body {
 	color: white;
 }
 
-.homeIntroLg {
+.homeIntro {
 	text-align: center;
 	font-size: 86px;
 	font-weight: bold;
 	color: white;
-	margin: 75px auto 200px auto;
-
+	margin: 75px auto 50px auto;
 	border-radius: 10px;
 	width: 30%;
-	padding: 30px;
+	padding: 10px;
 }
 .homeIntroMd {
 	text-align: center;

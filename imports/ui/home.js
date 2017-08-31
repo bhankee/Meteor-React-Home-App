@@ -10,7 +10,10 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				<h1 className="homeIntroLg">Welcome Home</h1>
+				<h1 className="homeIntro">Welcome Home</h1>
+				<h3 className="homeIntroMd">
+					Select a category below to upgrade your house!
+				</h3>
 
 				<PicNav />
 			</div>
