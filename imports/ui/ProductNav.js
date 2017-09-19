@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
-const ProductNav = () =>
+const ProductNav = () => (
 	<div className="navList">
 		<Link to="/" className="navList">
 			Home
@@ -19,6 +19,7 @@ const ProductNav = () =>
 		<Link to="/flooring" className="navList">
 			Flooring
 		</Link>
-	</div>;
+	</div>
+);
 
 export default ProductNav;

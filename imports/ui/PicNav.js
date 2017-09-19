@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
-const PicNav = () =>
+const PicNav = () => (
 	<div className="houseItems">
 		<div className="row">
 			<div className="col-md-6">
@@ -56,6 +56,7 @@ const PicNav = () =>
 				</Link>
 			</div>
 		</div>
-	</div>;
+	</div>
+);
 
 export default PicNav;

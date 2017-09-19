@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './home';
+import { Router, Route, Link, browserHistory } from 'react-router';
+import { Tracker } from 'meteor/tracker';
+import Home from './Home';
 import PaintPage from './PaintPage';
 import AppliancePage from './AppliancePage';
 import HardwarePage from './HardwarePage';
 import FlooringPage from './FlooringPage';
+import Signup from './Signup';
+import Login from './Login';
 
-class App extends Component {
-	render() {
-		return (
-			<BrowserRouter>
-				<div>
-					<Route exact path="/" component={Home} />
-					<Route path="/paint" component={PaintPage} />
-					<Route path="/appliances" component={AppliancePage} />
-					<Route path="/hardware" component={HardwarePage} />
-					<Route path="/flooring" component={FlooringPage} />
-				</div>
-			</BrowserRouter>
-		);
-	}
-}
-
-export default App;
+// class App extends Component {
+//
+//
+// 	)
+// 	render() {
+// 		return (routes
+//
+// 		);
+// 	}
+// }
+//
+// export default App;
