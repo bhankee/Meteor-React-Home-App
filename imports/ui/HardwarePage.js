@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 import ProductNav from './ProductNav';
 import { Hardware } from '../api/Hardware';
@@ -14,13 +15,15 @@ class HardwarePage extends Component {
 		e.preventDefault();
 		Hardware.insert({
 			brand: e.target.brand.value,
-			color: e.target.descripton.value,
+			description: e.target.descripton.value,
 			model: e.target.model.value,
-			room: e.target.room.value
+			room: e.target.room.value,
+			userId: Meteor.userId()
 		});
 	}
 
 	render() {
+		Meteor.subscribe('hardware');
 		var hardwareArr = Hardware.find().fetch();
 
 		const hardwareData = function(list) {
@@ -30,18 +33,18 @@ class HardwarePage extends Component {
 						className=" text-center item-container"
 						key={hardware._id}
 					>
-						<p>
-							Brand: {hardware.brand}
-						</p>
-						<p>
-							Desciption: {hardware.discription}
-						</p>
-						<p>
-							Model: {hardware.model}
-						</p>
-						<p>
-							Room: {hardware.room}
-						</p>
+						<button
+							className="delButton"
+							onClick={() => {
+								Hardware.remove({ _id: hardware._id });
+							}}
+						>
+							X
+						</button>
+						<p>Brand: {hardware.brand}</p>
+						<p>Desciption: {hardware.description}</p>
+						<p>Model: {hardware.model}</p>
+						<p>Room: {hardware.room}</p>
 					</div>
 				);
 			});

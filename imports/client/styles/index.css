@@ -1,5 +1,5 @@
 body {
-	background-color: #ffd464;
+	background-color: #80adb9;
 	font-family: 'Ubuntu', sans-serif;
 }
 
@@ -24,9 +24,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
-.input {
-	margin-top: 5px;
-	color: #f26964;
+.form-control {
 	font-size: 26px;
 }
 
@@ -42,12 +40,11 @@ body {
 	color: white;
 	margin: 75px auto 50px auto;
 	border-radius: 10px;
-	width: 30%;
 	padding: 10px;
 }
 .homeIntroMd {
 	text-align: center;
-	font-size: 36px;
+	font-size: 26px;
 	color: #2370c4;
 	margin-bottom: 125px;
 }
@@ -65,7 +62,7 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	cursor: pointer;
-	color: #1253a4;
+	color: #f1f2f6;
 }
 
 .homeNav {
@@ -77,7 +74,7 @@ body {
 	height: auto;
 	background-color: #1253a4;
 	border: 1px solid #a9a9a9;
-	border-radius: 10px;
+	border-radius: 30px;
 	color: #caebf2;
 	float: left;
 	padding: 10px;
@@ -100,4 +97,39 @@ body {
 	text-align: center;
 	padding: 25px;
 	font-size: 28px;
+}
+.logoutButton {
+	margin-right: 40px;
+	margin-top: 20px;
+	float: right;
+}
+
+.delButton {
+	background-color: #1253a4;
+	width: 10%;
+	height: auto;
+	float: right;
+	overflow: hidden;
+	border-radius: 50%;
+	border: none;
+}
+
+.input {
+	margin-top: 5px;
+	color: #3f577b;
+	font-size: 26px;
+}
+
+.inputField {
+	border-radius: 7px;
+	color: #5683c3;
+	font-size: 36px;
+	margin: 10px;
+}
+
+.welcomeText {
+	margin-top: 150px;
+	margin-bottom: 70px;
+	font-size: 66px;
+	color: white;
 }

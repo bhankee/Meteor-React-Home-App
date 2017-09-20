@@ -18,34 +18,46 @@ class Login extends Component {
 		let password = this.refs.password.value.trim();
 
 		Meteor.loginWithPassword({ email }, password, err => {
-			console.log('Login callback', err);
+			if (err) {
+				this.setState({
+					error: 'Unable to login. Please verify email & password'
+				});
+			} else {
+				this.setState({ error: '' });
+			}
 		});
 	}
 
 	render() {
 		return (
-			<div>
-				<h1>My Home App</h1>
+			<div className="row">
+				<div className="col-md-12 text-center">
+					<h1 className="welcomeText">My Home App</h1>
 
-				{this.state.error ? <p>{this.state.error}</p> : undefined}
+					{this.state.error ? <p>{this.state.error}</p> : undefined}
 
-				<form onSubmit={this.onSubmit.bind(this)}>
-					<input
-						type="email"
-						ref="email"
-						name="email"
-						placeholder="Email"
-					/>
-					<input
-						type="password"
-						ref="password"
-						name="password"
-						placeholder="Password"
-					/>
-					<button>Login</button>
-				</form>
+					<form onSubmit={this.onSubmit.bind(this)} noValidate>
+						<input
+							className="inputField"
+							type="email"
+							ref="email"
+							name="email"
+							placeholder="Email"
+						/>
 
-				<Link to="/signup">Need to sign up?</Link>
+						<input
+							className="inputField"
+							type="password"
+							ref="password"
+							name="password"
+							placeholder="Password"
+						/>
+
+						<button className="btn btn-primary">Login</button>
+					</form>
+
+					<Link to="/signup">Need to sign up?</Link>
+				</div>
 			</div>
 		);
 	}

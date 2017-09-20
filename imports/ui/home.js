@@ -14,12 +14,22 @@ class Home extends Component {
 	}
 	render() {
 		return (
-			<div>
-				<button onClick={this.onLogout.bind(this)}>Logout</button>
-				<h1 className="homeIntro">Welcome Home</h1>
-				<h3 className="homeIntroMd">
-					Select a category below to upgrade your house!
-				</h3>
+			<div className="row">
+				<div className="col-md-12">
+					<button
+						className="btn btn-primary logoutButton"
+						onClick={this.onLogout.bind(this)}
+					>
+						Logout
+					</button>
+				</div>
+
+				<div className="col-md-4 col-md-offset-4">
+					<div className="homeIntro">Welcome Home</div>
+					<div className="homeIntroMd">
+						Select a category below to upgrade your house!
+					</div>
+				</div>
 
 				<PicNav />
 			</div>

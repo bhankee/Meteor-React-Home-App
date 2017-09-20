@@ -17,37 +17,44 @@ class Signup extends Component {
 		let password = this.refs.password.value.trim();
 
 		Accounts.createUser({ email, password }, err => {
-			console.log('Signup callback', err);
+			if (err) {
+				this.setState({ error: err.reason });
+			} else {
+				this.setState({ error: '' });
+			}
 		});
-		// this.setState({
-		// 	error: 'Whoops, something went wrong!'
-		// });
 	}
 
 	render() {
 		return (
-			<div>
-				<h1>Join My Home App</h1>
+			<div className="row">
+				<div className="col-md-12 text-center">
+					<h1 className="welcomeText">Join Home App</h1>
 
-				{this.state.error ? <p>{this.state.error}</p> : undefined}
+					{this.state.error ? <p>{this.state.error}</p> : undefined}
 
-				<form onSubmit={this.onSubmit.bind(this)}>
-					<input
-						type="email"
-						ref="email"
-						name="email"
-						placeholder="Email"
-					/>
-					<input
-						type="password"
-						ref="password"
-						name="password"
-						placeholder="Password"
-					/>
-					<button>Create Account</button>
-				</form>
+					<form onSubmit={this.onSubmit.bind(this)} noValidate>
+						<input
+							className="inputField"
+							type="email"
+							ref="email"
+							name="email"
+							placeholder="Email"
+						/>
 
-				<Link to="/Login">Already have an account?</Link>
+						<input
+							className="inputField"
+							type="password"
+							ref="password"
+							name="password"
+							placeholder="Password"
+						/>
+
+						<button className="btn btn-primary">Sign up</button>
+					</form>
+
+					<Link to="/login">Already signed up?</Link>
+				</div>
 			</div>
 		);
 	}

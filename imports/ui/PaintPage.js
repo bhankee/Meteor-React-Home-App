@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 import ProductNav from './ProductNav';
 import { Paint } from '../api/Paint';
@@ -17,11 +18,14 @@ class PaintPage extends Component {
 			brand: e.target.brand.value,
 			color: e.target.color.value,
 			sheen: e.target.sheen.value,
-			room: e.target.room.value
+			room: e.target.room.value,
+			userId: Meteor.userId()
 		});
 	}
 
 	render() {
+		//ADD ME
+		Meteor.subscribe('paint');
 		var paintArr = Paint.find().fetch();
 
 		const paintData = function(list) {
@@ -31,18 +35,18 @@ class PaintPage extends Component {
 						className=" text-center item-container"
 						key={paint._id}
 					>
-						<p>
-							Brand: {paint.brand}
-						</p>
-						<p>
-							Color: {paint.color}
-						</p>
-						<p>
-							Sheen: {paint.sheen}
-						</p>
-						<p>
-							Room: {paint.room}
-						</p>
+						<button
+							className="delButton"
+							onClick={() => {
+								Paint.remove({ _id: paint._id });
+							}}
+						>
+							X
+						</button>
+						<p>Brand: {paint.brand}</p>
+						<p>Color: {paint.color}</p>
+						<p>Sheen: {paint.sheen}</p>
+						<p>Room: {paint.room}</p>
 					</div>
 				);
 			});
@@ -129,9 +133,7 @@ class PaintPage extends Component {
 						/>
 					</div>
 				</form>
-				<div>
-					{paintData(paintArr)}
-				</div>
+				<div>{paintData(paintArr)}</div>
 			</div>
 		);
 	}

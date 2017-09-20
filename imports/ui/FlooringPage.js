@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 import ProductNav from './ProductNav';
 import { Flooring } from '../api/Flooring';
@@ -14,13 +15,15 @@ class FlooringPage extends Component {
 		e.preventDefault();
 		Flooring.insert({
 			brand: e.target.brand.value,
-			color: e.target.descripton.value,
+			description: e.target.descripton.value,
 			model: e.target.model.value,
-			room: e.target.room.value
+			room: e.target.room.value,
+			userId: Meteor.userId()
 		});
 	}
 
 	render() {
+		Meteor.subscribe('flooring');
 		var flooringArr = Flooring.find().fetch();
 
 		const flooringData = function(list) {
@@ -30,18 +33,18 @@ class FlooringPage extends Component {
 						className=" text-center item-container"
 						key={flooring._id}
 					>
-						<p>
-							Brand: {flooring.brand}
-						</p>
-						<p>
-							Desciption: {flooring.discription}
-						</p>
-						<p>
-							Model: {flooring.model}
-						</p>
-						<p>
-							Room: {flooring.room}
-						</p>
+						<button
+							className="delButton"
+							onClick={() => {
+								Flooring.remove({ _id: flooring._id });
+							}}
+						>
+							X
+						</button>
+						<p>Brand: {flooring.brand}</p>
+						<p>Desciption: {flooring.description}</p>
+						<p>Model: {flooring.model}</p>
+						<p>Room: {flooring.room}</p>
 					</div>
 				);
 			});

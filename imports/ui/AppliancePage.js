@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 import ProductNav from './ProductNav';
 import { Appliances } from '../api/Appliances';
@@ -14,13 +15,15 @@ class AppliancePage extends Component {
 		e.preventDefault();
 		Appliances.insert({
 			brand: e.target.brand.value,
-			color: e.target.descripton.value,
+			description: e.target.descripton.value,
 			model: e.target.model.value,
-			room: e.target.room.value
+			room: e.target.room.value,
+			userId: Meteor.userId()
 		});
 	}
 
 	render() {
+		Meteor.subscribe('appliance');
 		var appliancesArr = Appliances.find().fetch();
 
 		const appliancesData = function(list) {
@@ -30,18 +33,18 @@ class AppliancePage extends Component {
 						className=" text-center item-container"
 						key={appliance._id}
 					>
-						<p>
-							Brand: {appliance.brand}
-						</p>
-						<p>
-							Desciption: {appliance.discription}
-						</p>
-						<p>
-							Model: {appliance.model}
-						</p>
-						<p>
-							Room: {appliance.room}
-						</p>
+						<button
+							className="delButton"
+							onClick={() => {
+								Appliances.remove({ _id: appliance._id });
+							}}
+						>
+							X
+						</button>
+						<p>Brand: {appliance.brand}</p>
+						<p>Desciption: {appliance.description}</p>
+						<p>Model: {appliance.model}</p>
+						<p>Room: {appliance.room}</p>
 					</div>
 				);
 			});
