@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Router, Route, Link, browserHistory } from 'react-router';
-import Home from './Home';
+import Home from './home';
 import PaintPage from './PaintPage';
 import AppliancePage from './AppliancePage';
 import HardwarePage from './HardwarePage';
