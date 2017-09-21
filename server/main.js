@@ -13,10 +13,7 @@ Meteor.startup(function() {
 		try {
 			new SimpleSchema({
 				email: {
-					type: String,
-					regEx: SimpleSchema,
-					RegEx,
-					Email
+					type: String
 				}
 			}).validate({ email: email });
 		} catch (e) {
