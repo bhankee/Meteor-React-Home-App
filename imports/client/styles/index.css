@@ -23,6 +23,10 @@ body {
 	margin: 30px auto 50px auto;
 	font-family: 'Ubuntu', sans-serif;
 }
+.formLink {
+	color: white;
+	margin-top: 10px;
+}
 
 .form-control {
 	font-size: 26px;
@@ -31,6 +35,9 @@ body {
 .button-buffer {
 	margin-top: 5px;
 	color: white;
+}
+.btn-block {
+	margin-bottom: 20px;
 }
 
 .homeIntro {
@@ -123,13 +130,38 @@ body {
 .inputField {
 	border-radius: 7px;
 	color: #5683c3;
-	font-size: 36px;
-	margin: 10px;
+	font-size: 26px;
+	width: 100%;
 }
 
 .welcomeText {
-	margin-top: 150px;
 	margin-bottom: 70px;
 	font-size: 66px;
 	color: white;
+}
+
+.formContainer {
+	margin-top: 170px;
+	background-color: #41627f;
+	border-radius: 15px;
+	padding: 50px;
+}
+
+.btn-block {
+	margin-top: 25px;
+}
+
+.bottomFooter {
+	width: auto;
+	height: 110px;
+	margin-top: 400px;
+}
+
+.footer {
+	text-align: center;
+	z-index: 1;
+}
+
+.footer p {
+	margin-top: 400px;
 }

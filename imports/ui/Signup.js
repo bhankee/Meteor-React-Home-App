@@ -27,15 +27,15 @@ class Signup extends Component {
 
 	render() {
 		return (
-			<div className="row">
-				<div className="col-md-12 text-center">
+			<div className="row text-center">
+				<div className="col-sm-4 col-sm-offset-4 formContainer">
 					<h1 className="welcomeText">Join Home App</h1>
 
 					{this.state.error ? <p>{this.state.error}</p> : undefined}
 
 					<form onSubmit={this.onSubmit.bind(this)} noValidate>
 						<input
-							className="inputField"
+							className="inputField form-group"
 							type="email"
 							ref="email"
 							name="email"
@@ -43,17 +43,28 @@ class Signup extends Component {
 						/>
 
 						<input
-							className="inputField"
+							className="inputField form-group"
 							type="password"
 							ref="password"
 							name="password"
 							placeholder="Password"
 						/>
 
-						<button className="btn btn-primary">Sign up</button>
+						<button className="btn btn-primary btn-lg btn-block">
+							Sign up
+						</button>
 					</form>
 
-					<Link to="/login">Already signed up?</Link>
+					<Link to="/login" className="formLink">
+						Already signed up?
+					</Link>
+				</div>
+				<div className="container-fluid">
+					<div className="row bottomFooter">
+						<div className="col-xs-12 col-md-12 footer">
+							<p>Copyright Brad Hankee 2017</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

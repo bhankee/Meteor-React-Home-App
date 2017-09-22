@@ -30,33 +30,50 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div className="row">
-				<div className="col-md-12 text-center">
-					<h1 className="welcomeText">My Home App</h1>
+			<div>
+				<div className="row text-center">
+					<div className="col-sm-4 col-sm-offset-4 formContainer">
+						<h1 className="welcomeText">My Home App</h1>
 
-					{this.state.error ? <p>{this.state.error}</p> : undefined}
+						{this.state.error ? (
+							<p>{this.state.error}</p>
+						) : (
+							undefined
+						)}
 
-					<form onSubmit={this.onSubmit.bind(this)} noValidate>
-						<input
-							className="inputField"
-							type="email"
-							ref="email"
-							name="email"
-							placeholder="Email"
-						/>
+						<form onSubmit={this.onSubmit.bind(this)} noValidate>
+							<input
+								className="inputField form-group"
+								type="email"
+								ref="email"
+								name="email"
+								placeholder="Email"
+							/>
 
-						<input
-							className="inputField"
-							type="password"
-							ref="password"
-							name="password"
-							placeholder="Password"
-						/>
+							<input
+								className="inputField form-group"
+								type="password"
+								ref="password"
+								name="password"
+								placeholder="Password"
+							/>
 
-						<button className="btn btn-primary">Login</button>
-					</form>
+							<button className="btn btn-primary btn-lg btn-block">
+								Login
+							</button>
+						</form>
 
-					<Link to="/signup">Need to sign up?</Link>
+						<Link to="/signup" className="formLink">
+							Need to sign up?
+						</Link>
+					</div>
+				</div>
+				<div className="container-fluid">
+					<div className="row bottomFooter">
+						<div className="col-xs-12 col-md-12 footer">
+							<p>Copyright Brad Hankee 2017</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
