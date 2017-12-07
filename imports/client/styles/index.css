@@ -52,7 +52,7 @@ body {
 .homeIntroMd {
   text-align: center;
   font-size: 26px;
-  color: #2370c4;
+  color: #f8af78;
   margin-bottom: 125px;
 }
 
@@ -79,10 +79,10 @@ body {
 .item-container {
   width: 400px;
   height: auto;
-  background-color: #1253a4;
-  border: 1px solid #a9a9a9;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 30px;
-  color: #caebf2;
+  color: #13b1d4;
   float: left;
   padding: 10px;
   margin: 10px;
@@ -123,7 +123,7 @@ body {
 
 .input {
   margin-top: 5px;
-  color: #3f577b;
+  color: #f8af78;
   font-size: 26px;
 }
 
