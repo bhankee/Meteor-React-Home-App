@@ -1,167 +1,167 @@
 body {
-	background-color: #80adb9;
-	font-family: 'Ubuntu', sans-serif;
+  background-color: #23a9ca;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .text-center {
-	text-align: center;
-	font-weight: bold;
-	color: #094099;
-	font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #094099;
+  font-family: 'Ubuntu', sans-serif;
 }
 .text-left {
-	text-align: left;
-	font-weight: 600;
-	color: black;
+  text-align: left;
+  font-weight: 600;
+  color: black;
 }
 
 .nav-left {
-	text-align: left;
+  text-align: left;
 }
 .form {
-	text-align: center;
-	margin: 30px auto 50px auto;
-	font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  margin: 30px auto 50px auto;
+  font-family: 'Ubuntu', sans-serif;
 }
 .formLink {
-	color: white;
-	margin-top: 10px;
+  color: white;
+  margin-top: 10px;
 }
 
 .form-control {
-	font-size: 26px;
+  font-size: 26px;
 }
 
 .button-buffer {
-	margin-top: 5px;
-	color: white;
+  margin-top: 5px;
+  color: white;
 }
 .btn-block {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .homeIntro {
-	text-align: center;
-	font-size: 86px;
-	font-weight: bold;
-	color: white;
-	margin: 75px auto 50px auto;
-	border-radius: 10px;
-	padding: 10px;
+  text-align: center;
+  font-size: 86px;
+  font-weight: bold;
+  color: white;
+  margin: 75px auto 50px auto;
+  border-radius: 10px;
+  padding: 10px;
 }
 .homeIntroMd {
-	text-align: center;
-	font-size: 26px;
-	color: #2370c4;
-	margin-bottom: 125px;
+  text-align: center;
+  font-size: 26px;
+  color: #2370c4;
+  margin-bottom: 125px;
 }
 
 .houseItems a {
-	margin: 10px;
-	font-size: 26px;
-	font-weight: bold;
-	cursor: pointer;
-	color: #1253a4;
+  margin: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1253a4;
 }
 
 .navList a {
-	margin: 10px;
-	font-size: 26px;
-	font-weight: bold;
-	cursor: pointer;
-	color: #f1f2f6;
+  margin: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f1f2f6;
 }
 
 .homeNav {
-	margin-top: 1000px;
+  margin-top: 1000px;
 }
 
 .item-container {
-	width: 400px;
-	height: auto;
-	background-color: #1253a4;
-	border: 1px solid #a9a9a9;
-	border-radius: 30px;
-	color: #caebf2;
-	float: left;
-	padding: 10px;
-	margin: 10px;
-	font-size: 26px;
+  width: 400px;
+  height: auto;
+  background-color: #1253a4;
+  border: 1px solid #a9a9a9;
+  border-radius: 30px;
+  color: #caebf2;
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  font-size: 26px;
 }
 
 .iconContainer {
-	text-align: center;
-	margin: 75px;
+  text-align: center;
+  margin: 75px;
 }
 
 .imgStyle {
-	background-color: #1253a4;
-	padding: 70px;
-	border-radius: 50%;
+  background-color: #1253a4;
+  padding: 70px;
+  border-radius: 50%;
 }
 
 .centerCaption {
-	text-align: center;
-	padding: 25px;
-	font-size: 28px;
+  text-align: center;
+  padding: 25px;
+  font-size: 28px;
 }
 .logoutButton {
-	margin-right: 40px;
-	margin-top: 20px;
-	float: right;
+  margin-right: 40px;
+  margin-top: 20px;
+  float: right;
 }
 
 .delButton {
-	background-color: #1253a4;
-	width: 10%;
-	height: auto;
-	float: right;
-	overflow: hidden;
-	border-radius: 50%;
-	border: none;
+  background-color: #1253a4;
+  width: 10%;
+  height: auto;
+  float: right;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
 }
 
 .input {
-	margin-top: 5px;
-	color: #3f577b;
-	font-size: 26px;
+  margin-top: 5px;
+  color: #3f577b;
+  font-size: 26px;
 }
 
 .inputField {
-	border-radius: 7px;
-	color: #5683c3;
-	font-size: 26px;
-	width: 100%;
+  border-radius: 7px;
+  color: #5683c3;
+  font-size: 26px;
+  width: 100%;
 }
 
 .welcomeText {
-	margin-bottom: 70px;
-	font-size: 66px;
-	color: white;
+  margin-bottom: 70px;
+  font-size: 66px;
+  color: #23a9ca;
 }
 
 .formContainer {
-	margin-top: 100px;
-	background-color: #41627f;
-	border-radius: 15px;
-	padding: 50px;
+  margin-top: 100px;
+  background-color: #fdfeff;
+  border-radius: 15px;
+  padding: 50px;
 }
 
 .btn-block {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
 .bottomFooter {
-	width: auto;
-	height: 110px;
-	margin-top: 400px;
+  width: auto;
+  height: 110px;
+  margin-top: 400px;
 }
 
 .footer {
-	text-align: center;
-	z-index: 1;
+  text-align: center;
+  z-index: 1;
 }
 
 .footer p {
-	margin-top: 400px;
+  margin-top: 400px;
 }
