@@ -112,7 +112,8 @@ body {
 }
 
 .delButton {
-  background-color: #1253a4;
+  background-color: #f8af78;
+  color: #ffffff;
   width: 10%;
   height: auto;
   float: right;
