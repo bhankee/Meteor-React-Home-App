@@ -38,21 +38,10 @@ class AppliancePage extends Component {
             >
               X
             </button>
-            <p>
-              <strong>Brand:</strong> {appliance.brand}
-            </p>
-            <p>
-              <strong>Desciption:</strong>
-              {appliance.description}
-            </p>
-            <p>
-              <strong>Model:</strong>
-              {appliance.model}
-            </p>
-            <p>
-              <strong>Room:</strong>
-              {appliance.room}
-            </p>
+            <p>Brand: {appliance.brand}</p>
+            <p>Desciption: {appliance.description}</p>
+            <p>Model: {appliance.model}</p>
+            <p>Room: {appliance.room}</p>
           </div>
         );
       });
