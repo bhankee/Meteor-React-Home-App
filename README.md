@@ -1,5 +1,7 @@
 # My Home App
 
+[Demo Application](https://myhome-app.herokuapp.com/)
+
 ### Purpose: To create an application that allows users to login and store home items such as
 
 * Paint Colors
@@ -19,7 +21,7 @@
 
 ### MeteorJS - Used to have the front end talk to the back end using HTTP requests and responses.
 
-### MongoDB - Used to store data that the user inputs. Each user has there own data that they can add or delete.
+### MongoDB - Used to store data that the user inputs. Each user has their own data that they can add or delete.
 
 ## Extra
 
