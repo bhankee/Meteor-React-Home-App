@@ -2,7 +2,7 @@
 
 [Demo Application](https://myhome-app.herokuapp.com/)
 
-![Screen shot of My Home App](https://Meteor-React-Home-App/public/Graphics/homeAppScreenshot.png)
+![Screen shot of My Home App](https://github.com/bhankee/Meteor-React-Home-App/public/Graphics/homeAppScreenshot.png)
 
 ### Purpose: To create an application that allows users to login and store home items such as
 
